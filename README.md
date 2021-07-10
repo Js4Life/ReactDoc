@@ -1,5 +1,27 @@
 # Getting Started with Create React App
 
+const OtherComponent = React.lazy(() => import('./OtherComponent'))
+
+
+<Suspense fallback={<div>Loading...</div>}>
+        <OtherComponent />
+</Suspense>
+
+import React, { lazy } from 'react';
+const MyComponent = lazy(() => import("./MyComponent.js"));
+
+function App1() {
+  return <Greeting firstName="Ben" lastName="Hector" />;
+}
+
+function App2() {
+  const props = {firstName: 'Ben', lastName: 'Hector'};
+  return <Greeting {...props} />;
+}
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
