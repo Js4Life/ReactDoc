@@ -1,13 +1,18 @@
-import React from "react"
+import React, { useContext } from "react"
+import { userContext } from "../advanced/UserContext"
 
-class HelloWorld extends React.Component {
-      render() {
+export function HelloWorld()  {
+
+        // const {user,setUser} = useContext(userContext)
+
+
         return (
           <div>
-            Hello World {this.props.name}
+            Hello World 
+            {/* <div>{JSON.stringify(user,null,2)}</div>
+            <button onClick={async ()=>setUser('hey')}>Login</button> */}
           </div>
         )
-      }
+
 }
 
-export default HelloWorld
